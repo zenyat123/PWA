@@ -7,10 +7,21 @@
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+	<meta name = "title" content = "Pelis">
+	<meta name = "description" content = "Una app de películas">
+	<meta name = "theme-color" content = "indigo">
+
+	<meta name = "apple-mobile-web-app-title" content = "Pelis">
+	<meta name = "apple-mobile-web-app-capable" content = "yes">
+	<meta name = "apple-mobile-web-app-status-bar-style" content = "black">
+
 	<title>PWA</title>
 	
 	<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel = "stylesheet" href = "src/css/estilos.css">
+
+	<link rel = "manifest" href = "src/js/manifest.json">
+	<link rel = "apple-touch-icon" href = "src/img/iconos/icono.png">
 	
 </head>
 
@@ -171,6 +182,28 @@
 		</section>
 
 	</div>
+
+	<script>
+
+		if('serviceWorker' in navigator){
+
+			window.addEventListener('load', function(){
+
+				navigator.serviceWorker.register('service-worker.js').then(function(registration){
+
+					console.log('[ServiceWorker] Registrado', registration.scope);
+
+				}, function(err){
+
+					console.log('[ServiceWorker] no se registro', err);
+
+				});
+
+			});
+
+		}
+
+	</script>
 
 </body>
 
