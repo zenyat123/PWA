@@ -1,7 +1,5 @@
 
 
-'use strict';
-
 const CACHE_NAME = 'cache-v1';
 
 const FILES_TO_CACHE = [
@@ -35,8 +33,6 @@ self.addEventListener('install', function(event){
 
 	);
 
-	self.skipWaiting();
-
 });
 
 self.addEventListener('activate', function(event){
@@ -45,11 +41,11 @@ self.addEventListener('activate', function(event){
 
 	event.waitUntil(
 
-		caches.keys().then(function(cachesNames){
+		caches.keys().then(function(cacheNames){
 
 			return Promise.all(
 
-				cachesNames.map(function(cacheName){
+				cacheNames.map(function(cacheName){
 
 					if(CACHE_NAME.indexOf(cacheName) === -1){
 
@@ -66,8 +62,6 @@ self.addEventListener('activate', function(event){
 		})
 
 	);
-
-	self.clients.claim();
 
 });
 

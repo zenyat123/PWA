@@ -85,6 +85,20 @@
 
 				</div>
 
+				<div class = "col-xs-12" id = "categoriasMoviles">
+					
+					<ul>
+						
+						<li><a href = "#">Cristianas</a></li>
+						<li><a href = "#">Aventura</a></li>
+						<li><a href = "#">Acción</a></li>
+						<li><a href = "#">Comedia</a></li>
+						<li><a href = "#">Futuristas</a></li>
+
+					</ul>
+
+				</div>
+
 			</div>
 
 		</div>
@@ -202,6 +216,16 @@
 			});
 
 		}
+
+		let botonCategorias = document.getElementById('botonCategorias');
+
+		botonCategorias.addEventListener('click', function(){
+
+			let categoriasMoviles = document.getElementById('categoriasMoviles');
+
+			categoriasMoviles.classList.toggle('show');
+
+		})
 
 	</script>
 

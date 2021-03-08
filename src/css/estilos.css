@@ -58,6 +58,10 @@ nav #menuMovil{
 	display: none;
 }
 
+nav #categoriasMoviles{
+	display: none;
+}
+
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
@@ -113,6 +117,23 @@ MOVIL (XS revisamos en 320px)
 	nav #menuMovil .glyphicon{
 		margin: 6% 20%;
 		font-size: 20px;
+	}
+
+	nav #categoriasMoviles ul{
+		background: indigo;
+		margin: 0px -15px;
+		padding-bottom: 30px;
+	}
+
+	nav #categoriasMoviles ul li{
+		list-style: none;
+		padding: 10px;
+		margin-left: -16px;
+	}
+
+	nav #categoriasMoviles ul li a{
+		text-decoration: none;
+		color: white;
 	}
 
 	section #peliculas img{
